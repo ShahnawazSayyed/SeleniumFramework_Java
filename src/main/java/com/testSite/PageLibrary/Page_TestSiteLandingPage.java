@@ -15,9 +15,11 @@ public class Page_TestSiteLandingPage {
         driver.get("http://automationpractice.com/");
         Thread.sleep(10000);
 
-        driver.findElement(OR_TestSiteLandingPage.BTN_SIGN_IN).click();
-
     }
 
+    public void Login() {
+
+        driver.findElement(OR_TestSiteLandingPage.BTN_SIGN_IN).click();
+    }
 
 }

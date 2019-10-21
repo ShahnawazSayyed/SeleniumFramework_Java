@@ -6,22 +6,27 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.testSite.BaseClass.BaseClass;
 import com.testSite.Utils.InitializeBrowser;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-
 
 public class TestNG_TestExecutor {
 
     private WebDriver driver = null;
-    private ExtentHtmlReporter htmlreporter;
+    private ExtentHtmlReporter htmlreporters;
     private ExtentReports extent;
+    public ExtentTest test;
+    private Logger logger;
 
     @BeforeSuite
     public void setUpTest(){
 
-        htmlreporter = new ExtentHtmlReporter("src/test/ExtentReports/extent.html");
+        htmlreporters = new ExtentHtmlReporter("src/test/ExtentReports/extent.html");
         extent = new ExtentReports();
-        extent.attachReporter(htmlreporter);
+        extent.attachReporter(htmlreporters);
+
+        logger = LogManager.getLogger(TestNG_TestExecutor.class);
 
         String browser;
 
@@ -35,13 +40,16 @@ public class TestNG_TestExecutor {
     public void executeTests() throws InterruptedException {
 
         ExtentTest test = extent.createTest("My First Test", "Test Description");
+        test.log(Status.INFO,"Starting the Test Execution");
+        test.info("Test Execution Started using TestNG Framework using Maven");
 
-        test.log(Status.INFO,"Starting the Execution log");
-        test.info("This Step shows use age of info");
+        logger.debug("This is a debug message");
+        logger.info("This is an info message");
+        logger.warn("This is a warn message");
+        logger.error("This is an error message");
 
         BaseClass b = new BaseClass(driver);
         b.Test1();
-        test.pass("The Test1 Execution is Pass");
     }
 
     @AfterSuite
