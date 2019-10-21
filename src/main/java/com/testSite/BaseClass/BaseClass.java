@@ -1,6 +1,6 @@
-package com.phptravels.BaseClass;
+package com.testSite.BaseClass;
 
-import com.phptravels.PageLibrary.Page_phpTravelsLanding;
+import com.testSite.PageLibrary.Page_TestSiteLandingPage;
 import org.openqa.selenium.WebDriver;
 
 public class BaseClass {
@@ -14,7 +14,7 @@ public class BaseClass {
 
     public void Test1() throws InterruptedException {
 
-        Page_phpTravelsLanding p = new Page_phpTravelsLanding(driver);
+        Page_TestSiteLandingPage p = new Page_TestSiteLandingPage(driver);
 
         p.LaunchPhpDemo();
 

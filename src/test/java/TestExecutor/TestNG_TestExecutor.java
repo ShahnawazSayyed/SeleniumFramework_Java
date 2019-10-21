@@ -1,7 +1,7 @@
 package TestExecutor;
 
-import com.phptravels.BaseClass.BaseClass;
-import com.phptravels.Utils.InitializeBrowser;
+import com.testSite.BaseClass.BaseClass;
+import com.testSite.Utils.InitializeBrowser;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
