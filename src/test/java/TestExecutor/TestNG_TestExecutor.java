@@ -9,7 +9,9 @@ import com.testSite.Utils.InitializeBrowser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
 
 public class TestNG_TestExecutor {
 
@@ -27,6 +29,7 @@ public class TestNG_TestExecutor {
         extent.attachReporter(htmlreporters);
 
         logger = LogManager.getLogger(TestNG_TestExecutor.class);
+        //PropertyConfigurator.configure(path);
 
         String browser;
 
