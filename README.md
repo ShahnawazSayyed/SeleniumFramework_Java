@@ -1,9 +1,12 @@
 # SeleniumFramework
 Selenium TestNG Framework
 
-Application Type = Web Based Application
+Application Type: Web Based Application
 
-Framework = TestNG
+Framework: TestNG
 
-Coding Lanuguage = Java
+Coding Lanuguage: Java
 
+DevOps Automation Server: Jenkins built on Apache Tomcat Server
+
+DevOps CICD Pipeline: compile -> test -> verify -> build -> deploy
