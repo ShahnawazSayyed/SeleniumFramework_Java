@@ -5,6 +5,5 @@ import org.openqa.selenium.By;
 public class OR_NewObjects {
 
     public static By TXT_EMAIL_ID = By.xpath("//*[@id='email']");
-    public static By TXT_PASSWORD = By.xpath("//*[@id='passwd']");
 
 }
